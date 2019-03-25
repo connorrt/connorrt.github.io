@@ -1,4 +1,9 @@
-html {background-color: #fffbed};
+$background-color: #fffbed;
+$accent-color: #777;
+$primary-text: #333;
+$secondary-text: #777;
+
+html {background-color: $background-color};
 
 .Container {
   max-width: 60rem;
@@ -6,46 +11,60 @@ html {background-color: #fffbed};
   font-family: sans-serif;
 
   h1 {
-    color: #333;
+    color: $primary-text;
     text-align: center;
   }
 
   h2 {
-    //font-size: 3vw;
     text-align: center;
-    color: #777;
+    color: $secondary-text;
   }
 
   p {
-    color: #777;
+    color: $secondary-text;
   }
 }
 
 .Header {
-  padding: 1em;
-  position:fixed;
+  position: fixed;
   top: 0;
-  left:0;
+  left: 0;
   width: 100%;
-  color: #fffbed;
-  background-color: darkslateblue;
+  color: $background-color;
+  background-color: $accent-color;
+  display: flex;
+  justify-content: center;
+}
+
+.ButtonCenter {
+  position: center;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  max-width: 60rem;
 }
 
 .Button {
-  padding: 1em;
-  background-color: #fffbed;
-  color: darkslateblue;
+  padding: 0.5em;
+  background-color: $accent-color;
+  color: $background-color;
   text-align: center;
+  font-size: large;
   display: inline-block;
-  margin: auto;
+  flex: auto;
 }
 
 .Title {
-  padding: 1em;
+  padding-top: 1em;
   height: 100vh;
 }
 
 .Links {
+  padding-bottom: 50px;
+  text-align: center;
+  height: 100vh;
+}
+.Projects {
   padding-bottom: 50px;
   text-align: center;
   height: 100vh;
