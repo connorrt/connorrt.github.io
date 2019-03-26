@@ -13,15 +13,17 @@ html {background-color: $background-color};
   h1 {
     color: $primary-text;
     text-align: center;
+    margin-bottom: 4vh;
   }
 
   h2 {
-    text-align: center;
     color: $secondary-text;
+    text-align: center
   }
 
   p {
     color: $secondary-text;
+    line-height: 25px;
   }
 }
 
@@ -45,13 +47,13 @@ html {background-color: $background-color};
 }
 
 .Button {
-  padding: 0.5em;
+  padding: 1em;
   background-color: $accent-color;
   color: $background-color;
   text-align: center;
   font-size: large;
   display: inline-block;
-  flex: auto;
+  flex-grow: 1;
 }
 
 .Title {
@@ -60,14 +62,22 @@ html {background-color: $background-color};
 }
 
 .Links {
-  padding-bottom: 50px;
   text-align: center;
   height: 100vh;
 }
 .Projects {
-  padding-bottom: 50px;
-  text-align: center;
   height: 100vh;
+  display: inline-block;
+}
+
+.ProjectImage {
+  text-align: center;
+  margin-right: 20px;
+}
+
+.ProjectExample {
+  position: relative;
+  display: flex;
 }
 
 

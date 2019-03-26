@@ -8,8 +8,6 @@ interface IndexPageProps {
             siteMetadata: {
                 name: string;
                 tagline: string;
-                github: string;
-                linkedin: string;
             },
         },
     };
@@ -21,8 +19,6 @@ export const indexPageQuery = graphql`
       siteMetadata {
         name
         tagline
-        github
-        linkedin
       }
     }
   }
@@ -58,8 +54,7 @@ export default class IndexPage extends React.Component<IndexPageProps, {}> {
         const {
             name,
             tagline,
-            github,
-            linkedin,
+
         } = this.props.data.site.siteMetadata;
         console.log("test");
         return (
@@ -78,9 +73,31 @@ export default class IndexPage extends React.Component<IndexPageProps, {}> {
                     <h2>{tagline}</h2>
                 </div>
                 <div className={styles.Links}>
-                    <h1>{`Social`}</h1>
-                    <a href={`https://github.com/connorrt`}>Github</a>
-                    <a href={`https:/linkedin.com`}>LinkedIn</a>
+                    <h1>Social</h1>
+                    <p>Where you can find me around the 'net.</p>
+                    <a href={`https://github.com/connorrt`}>
+                        <img src = {`/icons/GitHub-Mark-32px.png`} alt={`Github`}/>
+                    </a>
+                    <a href={`https:/linkedin.com`}>
+                        <img src = {`/icons/In-Black-34px-R.png`} alt={`LinkedIn`}/>
+                    </a>
+                </div>
+                <div className={styles.Projects}>
+                    <h1>Projects</h1>
+                    <h2>
+                        <a href={`http://blackandback.ml`}>Black And Back&nbsp;</a>
+                        <a href={`https://github.com/SCCapstone/blackandback`}>(Github)</a>
+                    </h2>
+                    <div className={styles.ProjectExample}>
+                        <div className={styles.ProjectExample}>
+                            <div className={styles.ProjectImage}>
+                                <img src={`http://i64.tinypic.com/34qthlj.png`} alt=""/>
+                            </div>
+                            <p>BlackAndBack is a image-processing webapp that adds color to black and white photos using
+                                machine learning. The colorizing component uses Keras and Tensorflow and the server is
+                                based in Django. (We like Python.) </p>
+                        </div>
+                    </div>
                 </div>
             </div>
         );
