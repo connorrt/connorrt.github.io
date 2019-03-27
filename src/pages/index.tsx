@@ -69,18 +69,21 @@ export default class IndexPage extends React.Component<IndexPageProps, {}> {
                 </div>
                 <div className={styles.Title}>
                     <h1>{name}</h1>
-                    /*picture here*/
                     <h2>{tagline}</h2>
                 </div>
                 <div className={styles.Links}>
                     <h1>Social</h1>
                     <p>Where you can find me around the 'net.</p>
+                    <span className={styles.LinkIcon}>
                     <a href={`https://github.com/connorrt`}>
-                        <img src = {`/icons/GitHub-Mark-32px.png`} alt={`Github`}/>
+                        <img src={`/icons/GitHub-Mark-32px.png`} alt={`Github`}/>
                     </a>
+                    </span>
+                    <span className={styles.LinkIcon}>
                     <a href={`https:/linkedin.com`}>
-                        <img src = {`/icons/In-Black-34px-R.png`} alt={`LinkedIn`}/>
+                        <img src={`/icons/In-Black-34px-R.png`} alt={`LinkedIn`}/>
                     </a>
+                    </span>
                 </div>
                 <div className={styles.Projects}>
                     <h1>Projects</h1>
