@@ -1,14 +1,14 @@
-$background-color: #fffbed;
-$accent-color: darkslategray;
-$primary-text: #333;
-$secondary-text: #777;
+$background-color: #eee;
+$accent-color: #2f4f4f;
+$primary-text: #1f3838;
+$secondary-text: #333;
 
 html {background-color: $background-color};
 
 .Container {
   max-width: 60rem;
   margin: 0 auto 0;
-  font-family: sans-serif;
+  font-family: Helvetica, sans-serif;
 
   h1 {
     color: $primary-text;
@@ -18,13 +18,16 @@ html {background-color: $background-color};
   }
 
   h2 {
-    color: $secondary-text;
+    color: $primary-text;
     text-align: center
   }
 
   p {
     color: $secondary-text;
     line-height: 25px;
+  }
+  a {
+    color: $accent-color
   }
 }
 
@@ -46,6 +49,7 @@ html {background-color: $background-color};
   justify-content: center;
   width: 100%;
   max-width: 60rem;
+  align-items: stretch;
 }
 
 .Button {
@@ -56,8 +60,12 @@ html {background-color: $background-color};
   font-size: 20px;
   display: inline-block;
   flex-grow: 1;
+  flex-basis: 1vw;
   -webkit-transition-duration: 0.25s;
   transition-duration: 0.25s;
+  outline: none;
+  border: none;
+  font-weight: bolder;
 
 }
 
@@ -67,8 +75,22 @@ html {background-color: $background-color};
 }
 
 .Title {
-  padding-top: 2em;
+  padding-top: 4em;
   height: 100vh;
+  text-align: center;
+}
+
+.TitleImage {
+  display: inline-grid;
+  border-radius: 12.5%;
+  background-color: $accent-color;
+  width: 350px;
+  height: 350px;
+  max-width: 50vw;
+  max-height: 50vw;
+  margin: 2em;
+  object-fit: fill;
+  box-sizing: inherit;
 }
 
 .Links {
@@ -78,7 +100,7 @@ html {background-color: $background-color};
 }
 
 .LinkIcon {
-  padding: 10px;
+  padding: 12px;
 }
 
 .Projects {
@@ -87,13 +109,25 @@ html {background-color: $background-color};
 }
 
 .ProjectImage {
+  background-size: contain;
   text-align: center;
-  margin-right: 20px;
+  margin-right: 2.5vw;
+  object-fit: fill;
+  max-width: 100%;
+  height: auto;
+}
+
+.ProjectBody {
+  position: relative;
+  display: flex;
+}
+
+.ProjectBodyText {
+  display: block;
 }
 
 .ProjectExample {
-  position: relative;
-  display: flex;
+  padding-top: 2em;
 }
 
 
