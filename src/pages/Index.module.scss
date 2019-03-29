@@ -1,9 +1,13 @@
-$background-color: #eee;
+$background-color: whitesmoke;
 $accent-color: #2f4f4f;
 $primary-text: #1f3838;
 $secondary-text: #333;
 
-html {background-color: $background-color};
+html {
+  background-color: $background-color
+}
+
+;
 
 .Container {
   max-width: 60rem;
@@ -13,7 +17,7 @@ html {background-color: $background-color};
   h1 {
     color: $primary-text;
     text-align: center;
-    margin-bottom: 2vh;
+    margin-bottom: 0;
     font-size: 50px;
   }
 
@@ -26,6 +30,7 @@ html {background-color: $background-color};
     color: $secondary-text;
     line-height: 25px;
   }
+
   a {
     color: $accent-color
   }
@@ -37,8 +42,7 @@ html {background-color: $background-color};
   top: 0;
   left: 0;
   width: 100%;
-  color: $background-color;
-  background-color: $accent-color;
+  background-color: $primary-text;
   display: flex;
   justify-content: center;
 }
@@ -48,12 +52,12 @@ html {background-color: $background-color};
   display: flex;
   justify-content: center;
   width: 100%;
-  max-width: 60rem;
+  max-width: 45rem;
   align-items: stretch;
 }
 
 .Button {
-  padding: 1em 0 1em;
+  padding: 1em;
   background-color: $accent-color;
   color: $background-color;
   text-align: center;
@@ -82,7 +86,7 @@ html {background-color: $background-color};
 
 .TitleImage {
   display: inline-grid;
-  border-radius: 12.5%;
+  border-radius: 50%;
   background-color: $accent-color;
   width: 350px;
   height: 350px;
@@ -109,12 +113,11 @@ html {background-color: $background-color};
 }
 
 .ProjectImage {
-  background-size: contain;
+  background-size: auto;
   text-align: center;
-  margin-right: 2.5vw;
+  margin-right: 1em;
   object-fit: fill;
   max-width: 100%;
-  height: auto;
 }
 
 .ProjectBody {
@@ -126,8 +129,27 @@ html {background-color: $background-color};
   display: block;
 }
 
-.ProjectExample {
-  padding-top: 2em;
+@media (max-width: 600px) {
+  .Projects {
+    text-align: center;
+  }
+  .ProjectBody {
+    display: inline;
+    text-align: center;
+  }
+  .ProjectImage{
+    margin-right: 0;
+  }
+  .Mobile{
+    display: none;
+  }
+}
+
+.Mobile {
+  bottom: 100%;
+  left: 0;
+  width: 100%;
+  text-align: center;
 }
 
 

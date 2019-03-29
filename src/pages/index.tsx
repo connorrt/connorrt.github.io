@@ -48,6 +48,14 @@ function scrollProjects() {
     });
 }
 
+function seeMobile() {
+    window.open(window.location.href,
+        "targetwindow",
+        `width = 360, height = 640`
+    )
+    ;
+}
+
 export default class IndexPage extends React.Component<IndexPageProps, {}> {
 
     public render() {
@@ -69,18 +77,21 @@ export default class IndexPage extends React.Component<IndexPageProps, {}> {
                 </div>
                 <div className={styles.Title}>
                     <h1>{name}</h1>
+                    <img className={styles.TitleImage} src={`
+                        https://media.licdn.com/dms/image/C4D03AQESxzqryh2fhw/profile-displayphoto-shrink_200_200/0?e=1559174400&v=beta&t=ABtAJi2TdPMpnf4AqZ3DoQ8IYudOf8-ec2vjMSbynSs
+                        `} alt={`It's me!`}/>
                     <h2>{tagline}</h2>
                 </div>
                 <div className={styles.Links}>
                     <h1>Social</h1>
-                    <p>Where you can find me around the 'net.</p>
+                    <p>Where you can find my work and I.</p>
                     <span className={styles.LinkIcon}>
                     <a href={`https://github.com/connorrt`}>
                         <img src={`/icons/GitHub-Mark-32px.png`} alt={`Github`}/>
                     </a>
                     </span>
                     <span className={styles.LinkIcon}>
-                    <a href={`https:/linkedin.com`}>
+                    <a href={`https://www.linkedin.com/in/connor-taylor-9ab483164`}>
                         <img src={`/icons/In-Black-34px-R.png`} alt={`LinkedIn`}/>
                     </a>
                     </span>
@@ -91,16 +102,18 @@ export default class IndexPage extends React.Component<IndexPageProps, {}> {
                         <a href={`http://blackandback.ml`}>Black And Back&nbsp;</a>
                         <a href={`https://github.com/SCCapstone/blackandback`}>(Github)</a>
                     </h2>
-                    <div className={styles.ProjectExample}>
-                        <div className={styles.ProjectExample}>
-                            <div className={styles.ProjectImage}>
-                                <img src={`http://i64.tinypic.com/34qthlj.png`} alt=""/>
-                            </div>
-                            <p>BlackAndBack is a image-processing webapp that adds color to black and white photos using
-                                machine learning. The colorizing component uses Keras and Tensorflow and the server is
-                                based in Django. (We like Python.) </p>
-                        </div>
+                    <div className={styles.ProjectBody}>
+                        <img className={styles.ProjectImage} src={`http://i64.tinypic.com/34qthlj.png`} width={200}
+                             height={200} alt=""/>
+                        <p>
+                            BlackAndBack is a image-processing webapp that adds color to black and white photos
+                            using machine learning. The colorizing component uses Keras and Tensorflow and the
+                            server is based in Django. (We&nbsp;like&nbsp;Python.)
+                        </p>
                     </div>
+                </div>
+                <div className={styles.Mobile}>
+                    <button onClick={seeMobile} className={styles.Button}>Want to see a mobile orientation?</button>
                 </div>
             </div>
         );
