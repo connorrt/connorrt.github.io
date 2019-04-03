@@ -5,9 +5,7 @@ $secondary-text: #333;
 
 html {
   background-color: $background-color
-}
-
-;
+};
 
 .Container {
   max-width: 60rem;
@@ -150,6 +148,10 @@ html {
   left: 0;
   width: 100%;
   text-align: center;
+}
+
+.GithubAPI {
+  size: auto;
 }
 
 

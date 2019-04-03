@@ -9,7 +9,7 @@ interface IndexPageProps {
                 name: string;
                 tagline: string;
             },
-        },
+        }
     };
 }
 
@@ -56,6 +56,24 @@ function seeMobile() {
     ;
 }
 
+const fetchUsers = async () => {
+    const api_call = await fetch(`https://api.github.com/users/connorrt/events`);
+
+    const data = await api_call.json();
+    return {data}
+};
+
+const showData = () => {
+    fetchUsers().then((res) => {
+        console.log(res);
+
+        document.getElementById(`login`).innerHTML = `Username: ${res.data[0].actor.login}`;
+        document.getElementById(`event_type`).innerHTML = `Event Type: ${res.data[0].type}`;
+        document.getElementById(`created_at`).innerHTML = `Time created: ${res.data[0].created_at}`;
+        document.getElementById(`repo_name`).innerHTML = `Repository: ${res.data[0].repo.name}`;
+    })
+};
+
 export default class IndexPage extends React.Component<IndexPageProps, {}> {
 
     public render() {
@@ -95,6 +113,13 @@ export default class IndexPage extends React.Component<IndexPageProps, {}> {
                         <img src={`/icons/In-Black-34px-R.png`} alt={`LinkedIn`}/>
                     </a>
                     </span>
+                    <div className={styles.GithubAPI} onLoad={showData()}>
+                        <h3>Here's the most recent (public) thing I've done on Github:</h3>
+                        <p id={`login`}>(Something's wrong with github api)</p>
+                        <p id={`event_type`}>oops</p>
+                        <p id={`created_at`}>oops</p>
+                        <p id={`repo_name`}>oops</p>
+                    </div>
                 </div>
                 <div className={styles.Projects}>
                     <h1>Projects</h1>
