@@ -31,16 +31,16 @@ function scrollProjects() {
     });
 }
 
-const HeaderContainer: React.ComponentType<IHeaderContainerProps> = (props: IHeaderContainerProps): JSX.Element => {
+export const HeaderSection = () => {
     return (
         <div className={styles.Header}>
             <div className={styles.ButtonCenter}>
-                <button onClick={scrollTop} className={styles.Button}>{props.tabLeft}</button>
-                <button onClick={scrollSocial} className={styles.Button}>{props.tabMiddle}</button>
-                <button onClick={scrollProjects} className={styles.Button}>{props.tabRight}</button>
+                <button onClick={scrollTop} className={styles.Button}>{"Top"}</button>
+                <button onClick={scrollSocial} className={styles.Button}>{"Links"}</button>
+                <button onClick={scrollProjects} className={styles.Button}>{"Projects"}</button>
             </div>
         </div>
     );
 };
 
-export default HeaderContainer;
+export default HeaderSection;

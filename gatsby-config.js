@@ -1,8 +1,7 @@
 module.exports = {
     siteMetadata: {
-        name: `Connor Taylor`,
-        tagline: `Welcome to my portfolio!`,
-
+        name: "Title",
+        tagline: "tagline",
     },
     plugins: [
         `gatsby-plugin-sass`,

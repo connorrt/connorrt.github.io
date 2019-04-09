@@ -126,6 +126,7 @@ html {
 
 .ProjectBodyText {
   display: block;
+  text-align: left;
 }
 
 @media (max-width: 600px) {
@@ -134,6 +135,9 @@ html {
   }
   .ProjectBody {
     display: inline;
+    text-align: center;
+  }
+  .ProjectBodyText{
     text-align: center;
   }
   .ProjectImage{
