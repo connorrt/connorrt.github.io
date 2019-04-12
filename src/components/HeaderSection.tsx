@@ -15,7 +15,7 @@ function scrollTop() {
     });
 }
 
-function scrollSocial() {
+function scrollProjects() {
     window.scrollTo({
         top: window.innerHeight,
         left: 0,
@@ -23,7 +23,7 @@ function scrollSocial() {
     });
 }
 
-function scrollProjects() {
+function scrollSocial() {
     window.scrollTo({
         top: 2 * window.innerHeight,
         left: 0,
@@ -36,8 +36,8 @@ export const HeaderSection = () => {
         <div className={styles.Header}>
             <div className={styles.ButtonCenter}>
                 <button onClick={scrollTop} className={styles.Button}>{"Top"}</button>
-                <button onClick={scrollSocial} className={styles.Button}>{"Links"}</button>
                 <button onClick={scrollProjects} className={styles.Button}>{"Projects"}</button>
+                <button onClick={scrollSocial} className={styles.Button}>{"Links"}</button>
             </div>
         </div>
     );

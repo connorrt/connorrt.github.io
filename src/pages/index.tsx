@@ -47,7 +47,6 @@ export default class IndexPage extends React.Component<IndexPageProps, {}> {
             tagline,
 
         } = this.props.data.site.siteMetadata;
-        console.log("test");
         return (
 
             <div className={styles.Container}>
@@ -56,9 +55,9 @@ export default class IndexPage extends React.Component<IndexPageProps, {}> {
 
                 <TitleSection/>
 
-                <LinksSection/>
-
                 <ProjectsSection/>
+
+                <LinksSection/>
 
                 <div className={styles.Mobile}>
                     <button onClick={seeMobile} className={styles.Button}>Want to see a mobile orientation?</button>
