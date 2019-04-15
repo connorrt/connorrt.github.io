@@ -10,9 +10,7 @@ const SectionContainer: React.ComponentType<ISectionContainerProps> = (props: IS
     return (
 
         <div className={styles.Title}>
-            <hr/>
             <h1>{props.title}</h1>
-            <hr/>
             {props.content}
         </div>
     );

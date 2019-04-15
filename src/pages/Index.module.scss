@@ -1,4 +1,4 @@
-$background-color: whitesmoke;
+$background-color: #fffaf0;
 $accent-color: #2f4f4f;
 $primary-text: $accent-color;
 $secondary-text: #333;
@@ -6,6 +6,7 @@ $secondary-text: #333;
 html {
   background-color: $background-color;
   padding: 0;
+  max-width: 100vw;
 }
 
 body {
@@ -18,16 +19,19 @@ body {
   font-family: "Helvetica", sans-serif;
 
   h1 {
-    background-color: #4f8f8f;
-    color: $background-color;
+    letter-spacing: 8px;
+    padding-top: 1em;
+    color: $primary-text;
     text-align: center;
     margin-bottom: 0;
     font-size: 50px;
     text-transform: uppercase;
     margin-top: 0;
+    width: 100%;
   }
 
   h2 {
+    letter-spacing: 0.3pt;
     color: $secondary-text;
     text-align: center;
   }
@@ -41,9 +45,12 @@ body {
     color: $secondary-text;
     line-height: 25px;
   }
+  a {
+    text-decoration: none;
+    color: $secondary-text;
+  }
   hr {
-    width: 100%;
-    margin: 0;
+    width: 3em;
   }
 }
 
@@ -52,8 +59,9 @@ body {
 }
 
 .PageCenteredContainer {
+  margin: 0;
   width: 100%;
-  height: 75%;
+  height: 65%;
   display: inline-flex;
 }
 
@@ -103,6 +111,29 @@ body {
   box-shadow: 0 2px 2px 0 $background-color;
 }
 
+.Button2 {
+  margin: 0 1em 1em;
+  padding: 0.5em 1em;
+  color: $accent-color;
+  background-color: $background-color;
+  text-align: center;
+  font-size: 20px;
+  display: inline-block;
+  flex-grow: 1;
+  flex-basis: 1vw;
+  -webkit-transition-duration: 0.25s;
+  transition-duration: 0.25s;
+  border: 2px solid $accent-color;
+  border-radius: 5px;
+}
+
+.Button2:hover {
+  z-index: 99;
+  color: $background-color;
+  background-color: $accent-color;
+  box-shadow: 0 2px 2px 0 $background-color;
+}
+
 .Title {
   height: 100vh;
   text-align: center;
@@ -122,18 +153,8 @@ body {
   box-sizing: inherit;
 }
 
-.Links {
-  text-align: center;
-  height: 100vh;
-}
-
 .LinkIcon {
   padding: 12px;
-}
-
-.Projects {
-  height: 100vh;
-  display: inline-block;
 }
 
 .ProjectImage {
@@ -169,12 +190,12 @@ body {
 
 .GithubAPI {
   margin-top: 5em;
+  max-width: 100vw;
   h4{
     color: $accent-color;
-    margin: 1em 2em 0 ;
+    margin: 0.5em 2em 0 ;
     font-size: 50pt;
   }
-  max-width: 100vw;
 }
 .GithubAPIBar {
   display: inline-flex;
@@ -207,6 +228,9 @@ body {
   }
   .GithubAPIBar{
     display: inline;
+  }
+  hr {
+    display: none;
   }
 }
 

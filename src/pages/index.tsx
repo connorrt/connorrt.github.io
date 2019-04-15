@@ -60,7 +60,7 @@ export default class IndexPage extends React.Component<IndexPageProps, {}> {
                 <LinksSection/>
 
                 <div className={styles.Mobile}>
-                    <button onClick={seeMobile} className={styles.Button}>Want to see a mobile orientation?</button>
+                    <button onClick={seeMobile} className={styles.Button2}>Want to see a mobile orientation?</button>
                 </div>
             </div>
         );

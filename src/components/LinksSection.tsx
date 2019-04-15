@@ -48,18 +48,11 @@ export const LinksSection: React.ComponentType = (): JSX.Element => {
         <div className={styles.PageCenteredContainer}>
             <div className={styles.PageCentered}>
                 <p>Where you can find my work and I.</p>
-                <span className={styles.LinkIcon}>
-            <a href={`https://github.com/connorrt`}>
-                <img src={`/icons/GitHub-Mark-32px.png`} alt={`Github`}/>
-            </a>
-        </span>
-                <span className={styles.LinkIcon}>
-                <a href={`https://www.linkedin.com/in/connor-taylor-9ab483164`}>
-                    <img src={`/icons/In-Black-34px-R.png`} alt={`LinkedIn`}/>
-                </a>
-            </span>
+                <a href = {`https://github.com/connorrt`}>Github</a>
+                <a href = {`https://www.linkedin.com/in/connor-taylor-9ab483164`}>LinkedIn</a>
+                <a href = {`mailto`}>Email</a>
                 <div className={styles.GithubAPI}>
-                    <h3>Speaking of Github...</h3>
+                    <h3>Github Bragging Rights:</h3>
                     {displayData}
                 </div>
             </div>
