@@ -45,23 +45,28 @@ export const LinksSection: React.ComponentType = (): JSX.Element => {
         : <p>Something went wrong.</p>;
 
     const content = (
-        <div className={styles.PageCenteredContainer}>
-            <div className={styles.PageCentered}>
-                <p>Where you can find my work and I.</p>
-                <a href = {`https://github.com/connorrt`}>Github</a>
-                <a href = {`https://www.linkedin.com/in/connor-taylor-9ab483164`}>LinkedIn</a>
-                <a href = {`mailto`}>Email</a>
-                <div className={styles.GithubAPI}>
-                    <h3>Github Bragging Rights:</h3>
-                    {displayData}
+        <>
+            <div className={styles.Links}>
+            <a href={`https://github.com/connorrt`}>Github</a>
+            <span className={styles.vr}/>
+            <a href={`https://www.linkedin.com/in/connor-taylor-9ab483164`}>LinkedIn</a>
+            <span className={styles.vr}/>
+            <a href={`mailto:connorrt@email.sc.edu`}>Email</a>
+            </div>
+            <div className={styles.GithubAPI}>
+                <div className={styles.PageCenteredContainer}>
+                    <div className={styles.PageCentered}>
+                        <h3>Github Bragging Rights:</h3>
+                        {displayData}
+                    </div>
                 </div>
             </div>
-        </div>
-    );
-    return (
-        <SectionContainer
-            title="Links"
-            content={content}
-        />
-    );
-};
+        </>
+            );
+            return (
+            <SectionContainer
+                title="Links"
+                content={content}
+            />
+            );
+            };

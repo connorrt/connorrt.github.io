@@ -1,6 +1,7 @@
-$background-color: #fffaf0;
+$background-color: #fffcfa;
 $accent-color: #2f4f4f;
 $primary-text: $accent-color;
+$faded-accent: #5e9e9e;
 $secondary-text: #333;
 
 html {
@@ -11,6 +12,10 @@ html {
 
 body {
   margin: 0;
+  ::selection {
+    color: $background-color;
+    background-color: $faded-accent;
+  }
 }
 
 .Container {
@@ -19,6 +24,7 @@ body {
   font-family: "Helvetica", sans-serif;
 
   h1 {
+    margin-left: 8px;
     letter-spacing: 8px;
     padding-top: 1em;
     color: $primary-text;
@@ -28,6 +34,7 @@ body {
     text-transform: uppercase;
     margin-top: 0;
     width: 100%;
+    max-width: 100vw;
   }
 
   h2 {
@@ -48,10 +55,17 @@ body {
   a {
     text-decoration: none;
     color: $secondary-text;
+    text-transform: uppercase;
   }
   hr {
     width: 3em;
   }
+}
+
+.vr {
+  border-left: 1px solid $primary-text;
+  height: 4px;
+  margin: 0 12px;
 }
 
 .PageCentered {
@@ -117,10 +131,11 @@ body {
   color: $accent-color;
   background-color: $background-color;
   text-align: center;
-  font-size: 20px;
+  font-size: 16px;
   display: inline-block;
   flex-grow: 1;
   flex-basis: 1vw;
+  outline: none;
   -webkit-transition-duration: 0.25s;
   transition-duration: 0.25s;
   border: 2px solid $accent-color;
@@ -145,16 +160,17 @@ body {
   display: inline-grid;
   border-radius: 50%;
   background-color: $accent-color;
-  width: 350px;
-  height: 350px;
+  width: 300px;
+  height: 300px;
   max-width: 50vw;
   max-height: 50vw;
   object-fit: fill;
   box-sizing: inherit;
+  margin: 30% 0;
 }
 
-.LinkIcon {
-  padding: 12px;
+.Links {
+  margin-top: 0.5em;
 }
 
 .ProjectImage {
