@@ -7,7 +7,8 @@
     "start": "gatsby develop",
     "develop": "gatsby develop",
     "build": "gatsby build",
-    "serve": "gatsby serve"
+    "serve": "gatsby serve",
+    "deploy": "gatsby build && gh-pages -d public -b master"
   },
   "dependencies": {
     "gatsby": "^2.1.20",
@@ -29,8 +30,5 @@
     "tslint-config-prettier": "^1.18.0",
     "tslint-loader": "^3.5.4",
     "tslint-react": "^3.6.0"
-  },
-  "scripts":{
-    "deploy": "gatsby build --prefix-paths && gh-pages -d public"
   }
 }
